@@ -43,13 +43,13 @@
 		window.onhashchange = function() {
 			setTimeout(function() {
 				pushStatePage();
-			}, 125);
+			}, 1);
 		}
 	} else {
 		window.addEventListener("popstate", function(e) {
 			setTimeout(function() {
 				pushStatePage();
-			}, 125);
+			}, 1);
 		});
 	}
 
@@ -182,18 +182,18 @@
 		}
 	}
 
-	function goBack() {
-		window.history.go(-1);
+	function goBack() {    	 			
+		window.history.go(-1);			
 		setTimeout(function() {
 			pushStatePage();
-		}, 125);
+		}, 1);
 	}
 
 	function goForward() {
 		window.history.go(1);
 		setTimeout(function() {
 			pushStatePage();
-		}, 125);
+		}, 1);
 	}
 
 	function pushStatePage() {
